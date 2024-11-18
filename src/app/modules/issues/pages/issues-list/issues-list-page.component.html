@@ -1,0 +1,26 @@
+<h1>Github Issues</h1>
+<div class="my-5 border-b-2 border-blue-600"></div>
+
+<section class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+  <div class="col-span-3 flex flex-col">
+    <div class="flex gap-2">
+      <button class="btn active">All</button>
+      <button class="btn">Open</button>
+      <button class="btn">Closed</button>
+    </div>
+  </div>
+
+  <div class="mt-4 flex flex-col col-span-2">
+    <a routerLink="/issue/123">Ir a issue 123</a>
+  </div>
+
+  <div>
+    @if(labelsQuery.isLoading()) {
+      <p>Estamos cargando</p>
+    } @else {
+     <issues-labels-selector
+       [labels]="labelsQuery.data() ?? []"
+     ></issues-labels-selector>
+    }
+  </div>
+</section>
