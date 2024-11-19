@@ -1,4 +1,4 @@
-import {GithubIssue, GithubIssueComment} from '../interfaces';
+import {GithubIssueComment} from '../interfaces';
 import {sleep} from '@helpers/sleep';
 import {environment} from '@env/environment.development';
 

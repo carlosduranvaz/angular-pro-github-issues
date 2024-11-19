@@ -6,6 +6,9 @@ import {IssueService} from '../../services/issue.service';
 import {
   IssueCommentComponent
 } from '../../components/issue-comment/issue-comment.component';
+import {
+  getIssueCommentsByNumber
+} from '../../actions/get-issue-comments-by-number.action';
 
 @Component({
   selector: 'app-issue-page',
@@ -29,4 +32,5 @@ export default class IssuePageComponent {
     )
   );
 
+  protected readonly getIssueCommentsByNumber = getIssueCommentsByNumber;
 }
