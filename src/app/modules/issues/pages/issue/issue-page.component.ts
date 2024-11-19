@@ -20,6 +20,7 @@ export default class IssuePageComponent {
   private route = inject(ActivatedRoute);
   private issueService = inject(IssueService);
   public issueQuery = this.issueService.issueQuery;
+  public issueCommentsQuery = this.issueService.issueCommentsQuery;
 
   issueNumber = toSignal<string | undefined>(
     this.route.paramMap.pipe(

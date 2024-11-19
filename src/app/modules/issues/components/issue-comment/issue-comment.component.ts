@@ -1,5 +1,5 @@
 import {Component, input} from '@angular/core';
-import {GithubIssue} from '../../interfaces';
+import {GithubIssue, GithubIssueComment} from '../../interfaces';
 import {MarkdownModule} from 'ngx-markdown';
 
 @Component({
@@ -9,5 +9,5 @@ import {MarkdownModule} from 'ngx-markdown';
   templateUrl: './issue-comment.component.html',
 })
 export class IssueCommentComponent {
-  issue = input.required<GithubIssue>();
+  issue = input.required<GithubIssue | GithubIssueComment>();
 }
