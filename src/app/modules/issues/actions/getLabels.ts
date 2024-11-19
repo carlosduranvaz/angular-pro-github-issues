@@ -1,4 +1,4 @@
-import {GithubLabel} from '../interfaces/github-label.interface';
+import {GithubLabel} from '../interfaces';
 import {sleep} from '@helpers/sleep';
 
 export const getLabels = async (): Promise<GithubLabel[]> => {
